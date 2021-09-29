@@ -26,12 +26,12 @@ void setup()
 void loop()
 {
 	// Get the input from the potentiometer and map it to a range of values from 0-99
-	int adc = analogRead(5);
-	adc = map(adc, 0, 1023, 0, 99);
+	int input = analogRead(5);
+	input = map(input, 0, 1023, 0, 99);
 
 	// Get the individual tens and ones digits
-	int tens = adc / 10;
-	int ones = adc % 10;
+	int tens = input / 10;
+	int ones = input % 10;
 	
 	// Turn the tens and ones digits into binary
 	// 7 -> 0111 -> [false, true, true, true]
